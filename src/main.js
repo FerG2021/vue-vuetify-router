@@ -1,7 +1,10 @@
 import { createApp } from "vue";
 import "./style.css";
 import App from "./App.vue";
-import router from "./router";
+import router from "./router/index.js";
+
+// Componentes globales
+import Sidebar from "./components/Sidebar.vue";
 
 // Vuetify
 import "@fortawesome/fontawesome-free/css/all.css";
@@ -24,4 +27,8 @@ const vuetify = createVuetify({
   },
 });
 
-createApp(App).use(router).use(vuetify).mount("#app");
+createApp(App)
+  .component("Sidebar", Sidebar)
+  .use(router)
+  .use(vuetify)
+  .mount("#app");
