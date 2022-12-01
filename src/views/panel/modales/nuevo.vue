@@ -21,6 +21,7 @@
                 required
                 class="item-form"
               ></v-text-field>
+              <!-- prepend-inner-icon="fas fa-home" -->
             </v-col>
 
             <v-col cols="12" md="4">

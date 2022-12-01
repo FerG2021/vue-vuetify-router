@@ -5,6 +5,8 @@
         prepend-avatar="https://randomuser.me/api/portraits/men/85.jpg"
         title="Fernando Gonzalez"
         subtitle="fernandojaviergonzalez2018@gmail.com"
+        class="usuario-info"
+        @click="irUsuario()"
       ></v-list-item>
     </v-list>
 
@@ -20,7 +22,7 @@
       ></v-list-item>
       <v-list-item
         prepend-icon="fas fa-user"
-        title="Shared with me"
+        title="Usuarios"
         value="shared"
         style="color: #fff"
         @click="irPanel()"
@@ -60,9 +62,16 @@ export default {
     irPanel() {
       this.$router.push("/panel");
     },
+
+    irUsuario() {
+      this.$router.push("/usuario");
+    },
   },
 };
 </script>
 
 <style>
+.usuario-info:hover {
+  background-color: #3a3737;
+}
 </style>
